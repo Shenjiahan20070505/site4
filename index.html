@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic Equation Solver</title>
+</head>
+<body>
+    <script>
+        // (1) 获取用户输入的系数 a, b, c
+        let inputA = prompt("Enter coefficient a (a > 0):");
+        let inputB = prompt("Enter coefficient b:");
+        let inputC = prompt("Enter coefficient c:");
+
+        // (2) 将输入转换为数字（关键步骤，避免字符串运算）
+        let a = parseFloat(inputA);
+        let b = parseFloat(inputB);
+        let c = parseFloat(inputC);
+
+        // (3) 计算判别式 delta（题目假设 delta >= 0 且 a > 0）
+        let delta = b * b - 4 * a * c;
+
+        // (4) 计算两个根
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        // (5) 使用 alert 弹窗展示结果
+        alert(`The solutions are:\nx1 = ${x1}\nx2 = ${x2}`);
+
+        // (6) 在控制台输出结果
+        console.log("Coefficients: a =", a, ", b =", b, ", c =", c);
+        console.log("Discriminant (delta):", delta);
+        console.log("Solutions: x1 =", x1, ", x2 =", x2);
+    </script>
+</body>
+</html>
